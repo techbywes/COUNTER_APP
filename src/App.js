@@ -3,18 +3,8 @@ import { useState } from "react";
 
 function App() {
   const [age, setAge] = useState(0);
-  const [save, setCount] = useState(age);
- 
+  const [save, setSave] = useState(0);
 
-  // const [inputValue, setinputValue] = useState("");
-  // const [showText, setshowText] = useState(true);
-  // const [textColor, settextColor] = useState("black");
-
-  // const handleInputChange = (event)=>
-  // {
-  //   setinputValue(event.target.value)
-  // }
- 
   let AddAge = () => {
     setAge(age + 1);
   };
@@ -26,12 +16,13 @@ function App() {
     setAge(0);
   };
   let saveAge = () => {
-    setCount(age);
+    if (save === 0) {
+      setSave(age);
+    } else {
+      setSave(save + age);
+    }
   };
 
-  // let toogleText = () => {
-  //   settextColor(textColor === "black" ? "red" : "black");
-  // };
   return (
     <>
       <h2>COUNTER APP</h2>
@@ -46,14 +37,6 @@ function App() {
         <button onClick={ReduceAge}>Reduce</button>
         <button onClick={ResetAge}>Reset</button>
         <button onClick={saveAge}>Save</button>
-        {/* <input type="text" onChange={handleInputChange}/>
-      {inputValue} */}
-
-        {/* the text below simply means if showtext is ==== true then show the h1 textbelow */}
-
-        {/* {showText === true && <h1>Hi My Name Is Wisdom</h1>} */}
-        {/* <h1 style={{ color: textColor }}>Hi My Name Is Wisdom</h1>
-      <button onClick={toogleText}>Hide / SHOW tEXT</button> */}
       </div>
     </>
   );
