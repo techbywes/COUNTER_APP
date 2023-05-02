@@ -3,8 +3,7 @@ import { useState } from "react";
 
 // Add a fucntionality that lets users save and access their saved counts
 // when they come back or it can be called hsiory
-//give them the ability to title each count they do
-// eg if it was for studnets or for a train station etc
+
 function App() {
   const [age, setAge] = useState(0);
   const [save, setSave] = useState(0);
@@ -39,10 +38,10 @@ function App() {
 
   return (
     <>
-      {isSubmitted && <h2>{inputValue}</h2>}
+      {isSubmitted === true && <h2>{inputValue}</h2>}
       <div className="App">
         <div className="input_btn">
-          {!isSubmitted && (
+          {!isSubmitted === true && (
             <form onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -59,7 +58,10 @@ function App() {
         </div>
 
         <div className="age_numbers">
-          <h1>{age}</h1>
+          <div className="age_circle">
+            <h1>{age}</h1>
+          </div>
+
           <div className="circle">
             <h1>{save}</h1>
           </div>
@@ -76,6 +78,7 @@ function App() {
         <button onClick={saveAge} className="btn_all">
           Save
         </button>
+        <footer>Hit save then reset before starting new count</footer>
       </div>
     </>
   );

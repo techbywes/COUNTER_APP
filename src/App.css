@@ -1,7 +1,7 @@
 .App {
   padding-top: 4rem;
-  max-width: 60%;
-  height: 60vh;
+  max-width: 70%;
+  height: 70vh;
   margin: 0 auto;
   text-align: center;
   margin-top: 4rem;
@@ -56,15 +56,14 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   outline: none;
-  box-shadow: 2px 2px 4px rgb(0, 0, 0);
-  text-shadow: 1px 0.2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 
   margin-right: 1rem;
   margin-bottom: 1rem;
 }
 
 .btn_all:hover {
-  background-color: #0000007d;
+  background-color: #000000de;
   color: antiquewhite;
   transition: background-color 0.9s ease;
 }
@@ -82,7 +81,25 @@ h1 {
   gap: 4rem;
   background-color: #bacddb;
   margin-bottom: 3rem;
+  padding-bottom: 2rem;
 }
+
+.age_circle {
+  background-color: #f3e8ff;
+  color: black;
+  border-radius: 8%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 1rem;
+  max-width: 50%;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .circle {
   background-color: black;
   color: white;
@@ -132,4 +149,16 @@ H2 {
   margin-left: -5rem;
   margin-top: -0.5rem;
   cursor: pointer;
+}
+.inputBtn:hover {
+  background-color: #000000d6;
+  transition: background-color 0.9s ease;
+}
+footer {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  font-family: Arial, Helvetica, sans-serif;
 }
